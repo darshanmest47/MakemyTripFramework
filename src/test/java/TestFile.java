@@ -1,5 +1,7 @@
 import Utilities.PropertyReader;
 import testUtilities.DriverFactory;
+import testUtilities.TestUtilities;
+
 import static testUtilities.DriverFactory.*;
 
 public class TestFile {
@@ -12,6 +14,8 @@ public class TestFile {
         System.out.println(getDriver().getTitle());
         Thread.sleep(4000);
         DriverFactory.quitBrowser();
+
+
 
     }
 }
