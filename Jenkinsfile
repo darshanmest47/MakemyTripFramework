@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+        jdk 'JDK 17' // Must match the Name in Global Tool Configuration
+    }
     triggers {
         // Use a single cron block with both schedules separated by a newline
         cron('''
