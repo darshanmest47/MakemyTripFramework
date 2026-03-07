@@ -16,6 +16,7 @@ public class MakeMyTriHomePage {
         PageFactory.initElements(DriverFactory.getDriver(),this);
         testUtilities = TestUtilities.getInstance();
     }
+    
 
     //Encapsulation
 
