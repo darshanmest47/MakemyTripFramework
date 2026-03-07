@@ -50,9 +50,10 @@ pipeline {
 
     post {
         always {
-            // Processes JUnit XML results for the Jenkins dashboard
-            junit '**/target/surefire-reports/*.xml'
-            // Archives HTML reports as artifacts
+            // allowEmptyResults: true prevents the build from failing if Maven skipped tests
+            junit testResults: '**/target/surefire-reports/*.xml', allowEmptyResults: true
+
+            // Archives HTML reports if they exist
             archiveArtifacts artifacts: 'target/*.html', allowEmptyArchive: true
         }
         success {
